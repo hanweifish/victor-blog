@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+    
+  <div class= "Blog-Top" align="center">Login</div>  
+    
+    <div style="height:400px">
+    
+    <form method="post">
+      <table>
+        <tr>
+          <td class="label">
+            Username
+          </td>
+          <td>
+            <input type="text" name="username" value="{{username}}" style="width:150px; font-size: 15px;padding: 0px;font-family: monospace; font-weight:normal">
+          </td>
+        </tr>
+
+        <tr>
+          <td class="label">
+            Password
+          </td>
+          <td>
+            <input type="password" name="password" value="" style="width:150px; font-size: 15px;padding: 0px;font-family: monospace; font-weight:normal">
+          </td>
+        </tr>
+      </table>
+
+      <div class="error">
+        {{error}}
+    
+      </div>
+	<br>
+    <input type ="submit">
+    </form>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="/static/main.css" />
+
+  <title>Blog</title>
+</head>
+
+<body>
+
+  <div class="login-area">
+    {% if user %}
+      <a class="login-link" href="/">Home</a>
+        |
+      <a class="login-link" href="/edit">Post</a>
+        |
+      <a class="login-link" href="/private">{{user.name}}</a> (<a class="login-link" href="/logout">logout</a>)
+    {% else %}
+      <a class="login-link" href="/">Home</a>
+        |
+      <a class="login-link" href="/login">Login</a>
+      |
+      <a class="login-link" href="/signup">Signup</a>
+    {% endif %}
+  </div>
+
+  <div class="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+  <br><br>
+  <hr>
+  <div class="foot">@Designed by Victor</div>
+</body>
+
+</html>

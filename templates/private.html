@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+  <div class= "Blog-Top" align="center">{{user.name}}'s Blog</div>        
+	{% for blog in blog_list %}
+	<div class="blog">
+		<div class="blog-title">{{blog.title}}</div>
+        <hr />		
+		<div class="blog-content">{{blog.content}}</div>
+        <br>
+		<div class="blog-bottom">Post Time: {{blog.created_time.strftime("%a, %d %b %Y %H:%M:%S")}}</div>
+	</div>
+    
+    <br><br>
+	{% endfor %}
+{% endblock %}
